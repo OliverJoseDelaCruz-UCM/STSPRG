@@ -1,0 +1,766 @@
+*
+{
+margin: 0%;
+}
+
+html
+{
+scroll-behavior: smooth;
+}
+
+
+.maincontainer
+{
+   /* background-color: #1BBFDB;*/
+}
+
+.containerone {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    height: 100px;
+    flex-wrap: wrap;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: #ffffff;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0) 70%, rgba(0,0,0,0.7) 100%);
+    background-blend-mode: overlay;
+}
+
+.header-left {
+    /*flex: 1 1 1px;*/
+}
+
+.header-left .logo {
+    max-height: 60px;
+    height: auto;
+}
+
+.header-middle {
+    flex: 2 1 200px;
+    text-align: left;
+}
+
+.header-middle h1 a {
+    font-family: 'Trebuchet MS', Geneva, sans-serif;
+    font-size: 2rem;
+    color: #1BBFDB;
+    text-shadow: 4px 4px 10px rgba(0,0,0,0.2);
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.header-right {
+    flex: 1 1 100px;
+    text-align: right;
+}
+
+.header-right .goal-pic {
+    max-height: 60px;
+    height: auto;
+}
+
+@media (max-width: 768px) {
+    .containerone {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        text-align: center;
+    }
+
+    .header-left, .header-middle, .header-right {
+        flex: 1 1 100%;
+        margin-bottom: 10px;
+    }
+
+    .header-right {
+        margin-bottom: 0;
+    }
+
+    .header-middle h1 {
+        font-size: 1.2rem;
+    }
+}
+
+
+.containertwo {
+    width: 100%;
+    height: 700px;
+    overflow: hidden;
+    position: relative;
+}
+
+.slideshow {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    animation: slideAnimation 30s infinite;
+}
+
+.slide {
+    width: 100%;
+    flex-shrink: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+}
+
+@keyframes slideAnimation {
+    0%   { transform: translateX(0%); }
+    33%  { transform: translateX(-100%); }
+    66%  { transform: translateX(-200%); }
+    100% { transform: translateX(0%); }
+}
+
+@media (max-width: 768px) {
+    .containertwo {
+        height: 250px;
+    }
+}
+
+.containerthree {
+    background-color: #1BBFDB;
+    color: #ffffff;
+    padding: 100px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.containerthree .text-wrapper {
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.containerthree h2 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.containerthree p {
+    font-size: 1.5rem;
+    line-height: 2;
+}
+
+@media (max-width: 768px) {
+    .containerthree h2 {
+        font-size: 2rem;
+        text-align: center;
+    }
+
+    .containerthree p {
+        font-size: 0.95rem;
+        text-align: center;
+    }
+
+    .containerthree {
+        padding: 30px 15px;
+    }
+}
+
+.containerfour {
+    background-color: #1BBFDB; /* white background */
+    color: #ffffff; /* blue text */
+    padding: 50px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.stat-box {
+    position: relative;
+    flex: 1;
+    padding: 40px;
+    text-align: center;
+    border-left: 5px solid #ffffff; /* vertical separator */
+    font-size: 1.5rem;
+    line-height: 2;
+
+}
+
+.stat-box:first-child {
+    border-left: none;
+}
+
+/* Hover image overlay */
+.stat-box .hover-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7); /* optional dark overlay */
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.stat-box .hover-image img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: cover;   /* Fills entire box */
+    display: block;
+
+}
+
+.stat-box:hover .hover-image {
+    opacity: 0.75;
+}
+
+
+@media (max-width: 768px) {
+    .stats-wrapper {
+        flex-direction: column;
+    }
+
+    .stat-box {
+        border-left: none;
+        border-top: 1px solid #ccc; /* horizontal separator */
+        margin-bottom: 15px;
+    }
+
+    .stat-box:first-child {
+        border-top: none;
+    }
+}
+
+.containerfive {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /*padding: 50px 20px;*/
+    font-family: Arial, Helvetica, sans-serif;
+    color: #000000;
+    background-color: #DDE9E9;
+    
+}
+
+.content-left {
+    flex: 1;
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    background-color: #DDE9E9;
+}
+
+.content-left h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.content-left p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+}
+
+.content-right {
+    flex: 1;
+    text-align: right;
+    padding: 30px;
+}
+
+.content-right img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .containerfive {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-left {
+        padding-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .content-right img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@keyframes fadeInScroll {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.text-wrapper,
+.content-left,
+.content-right,
+.stat-box,
+.collage-grid,
+.container-explore h2,
+.explore-card-wrapper,
+.explore-container,
+.timeline {
+  animation: fadeInScroll 3s ease-out both;
+  animation-timeline: view();
+  animation-range: entry 10% cover 60%;
+}
+
+/* ===== Collage Section ===== */
+.container-collage {
+    background-color: #1BBFDB;
+    padding: 40px 20px;
+    /*margin: 40px 0;  spacing from other containers */
+}
+
+.collage-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 15px;
+}
+
+.collage-grid img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Mobile layout */
+@media (max-width: 768px) {
+    .collage-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .collage-grid img {
+        height: 160px;
+    }
+}
+
+/* ===== Explore More Section ===== */
+.container-explore {
+    background-color: #1BBFDB;
+    padding: 60px 20px;
+    text-align: center;
+    color: #fff;
+    /*margin: 40px 0; spacing */
+}
+
+.container-explore h2 {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+}
+
+.explore-card-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.explore-card {
+    background-image: url(Waves-North-Shore-Oahu-Hawaiian-Islands.webp);
+    background-color: #ffffff;
+    color: #000;
+    width: 300px;
+    padding: 20px;
+    border-radius: 12px;
+    text-decoration: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.explore-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.25);
+}
+
+.explore-img {
+    width: 100%;
+    height: 160px;
+    background-image: url("placeholder.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.explore-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+
+/*
+.categorylinks
+{
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.categorylinks a
+{
+    background-color: #748b9a;
+    font-size: 20px;
+    color: #f7f7f7;
+    text-decoration: none;
+    padding: 2%;
+    width: 100%;
+    text-align: center;
+    font-family: "Spectral", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.categorylinks a:hover
+{
+    background-color: #f7f7f7;
+    transition: all .5s ease-in-out;
+    font-size: 20px;
+    color: black;
+    text-decoration: none;
+    padding: 2%;
+    width: 100%;
+    text-align: center;
+    border-radius: 25px;
+}*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #E8F8FF;
+    color: #003344;
+}
+
+/* HEADER BANNER */
+.about-banner {
+    background: linear-gradient(to bottom, #1BBFDB, #0A90A5);
+    text-align: center;
+    padding: 80px 20px;
+    color: white;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    animation: fadeDown 1s ease-out;
+}
+
+.about-banner h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.about-banner p {
+    margin-top: 10px;
+    font-size: 1.3rem;
+}
+
+/* SECTION TITLE */
+.section-title {
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2.2rem;
+    font-weight: bold;
+    color: #0B6D82;
+    animation: fadeUp 1s forwards;
+}
+
+/* MEMBERS */
+.members-section {
+    padding: 20px 40px 70px;
+}
+
+.members-wrapper {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 35px;
+}
+
+/* CARD DESIGN */
+.member-card {
+    width: 260px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+    text-align: center;
+    transition: transform .3s ease, box-shadow .3s ease;
+    animation: fadeUp 1.2s ease-out both;
+    animation-timeline: view();
+    animation-range: entry 0% cover 35%;
+}
+
+/* Card hover effect */
+.member-card:hover {
+    transform: translateY(-10px) scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.25);
+}
+
+/* Image frame */
+.img-frame {
+    width: 100%;
+    height: 240px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.img-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text inside card */
+.member-card h3 {
+    font-size: 1.4rem;
+    color: #0A90A5;
+    margin-bottom: 8px;
+}
+
+.member-card p {
+    font-size: 1rem;
+    color: #003344;
+}
+
+/* Back button */
+.back-container {
+    text-align: center;
+    margin: 50px 0 30px;
+}
+
+.back-btn {
+    background-color: #1BBFDB;
+    color: white;
+    padding: 12px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s ease;
+}
+
+.back-btn:hover {
+    background-color: #0A90A5;
+}
+
+/* Animations */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+.footernavmaincontainer
+{
+    background-color: #ffffff;
+    border-top: 1px solid black;
+}
+
+.maincontainerofthefooterlinkboxes
+{
+    display: flex;
+    padding: 20 0 5%;
+    justify-content: space-around;
+    width: 25%;
+}
+
+.footerheader
+{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.footerlinklist
+{
+padding: 0%;
+}
+
+.footerlinklist li
+{
+list-style-type: none;
+padding: 2%;
+font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+font-size: large;
+}
+
+.footerlinklist li a
+{
+text-decoration: none;
+
+}
+
+.copyrights
+{
+font-size: small;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    background-color: #F7FAFA;
+}
+
+/* HERO */
+.hero-explore {
+    background: linear-gradient(to bottom, rgba(0,0,0,0.2), rgba(0,0,0,0.6)),
+                url("HeroDrinking\ Water\ report\ UN0389288.jpg.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+
+.hero-explore h1 {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+/* MAIN CONTENT */
+.explore-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.explore-container h2 {
+    color: #1BBFDB;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 100px;
+}
+
+.explore-container p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 60px;
+}
+
+/* INTERACTIVE BOXES */
+.interactive-section {
+    margin-top: 40px;
+}
+
+.facts-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.fact-box {
+    background-image: url(Waves-North-Shore-Oahu-Hawaiian-Islands.webp);
+    color: #fff;
+    padding: 25px;
+    border-radius: 10px;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s ease;
+    font-size: 1.2rem;
+    min-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.fact-box:hover {
+    opacity: 0.8;
+    transform: scale(1.03);
+}
+
+.fact-hidden1 {
+    display: none;
+    margin-top: 15px;
+    background-color: #1BBFDB;
+    padding: 20px;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-left: 10px;
+}
+
+
+/* TIMELINE */
+.timeline {
+    padding-top: 90px;
+    padding-bottom: 110px;
+}
+
+.timeline h2 {
+    margin-bottom: 20px;
+}
+
+.timeline-step {
+    background-color: #fff;
+    border-left: 5px solid #1BBFDB;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+}
+
+/* CTA BUTTON */
+.cta-section {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.cta-section a {
+    background-color: #1BBFDB;
+    color: #fff;
+    padding: 15px 40px;
+    font-size: 1.3rem;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.cta-section a:hover {
+    background-color: #159CB2;
+}
+
+@media (max-width: 768px) {
+    .facts-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
